@@ -15,6 +15,22 @@
     {
       "src": "admin/index.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "admin/config.yml",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "blog/**/*.md",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "img/**/*.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "img/**/*.svg",
+      "use": "@vercel/static"
     }
   ],
   "rewrites": [
