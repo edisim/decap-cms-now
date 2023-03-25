@@ -1,6 +1,6 @@
 {
   "env": {
-    "OAUTH_CLIENT_ID": "@oauth-client-id",
-    "OAUTH_CLIENT_SECRET": "@oauth-client-secret"
+    "OAUTH_CLIENT_ID": "@OAUTH_CLIENT_ID",
+    "OAUTH_CLIENT_SECRET": "@OAUTH_CLIENT_SECRET"
   }
 }
