@@ -1,6 +1,7 @@
 ---
 title: House on Rocks
 date: 2023-03-25T23:14:44.998Z
+author: map-name-edi-bio-design-code-avatar-img-lensa-pfp-dalle-outpaint-png
 description: "Just in: small batch of Jamaican Blue Mountain in store next week"
 ---
 We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.
