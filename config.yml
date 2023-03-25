@@ -84,7 +84,7 @@ collections:
     label: "Autoren"
     folder: "authors"
     create: true
-    slug: "{{slug}}"
+    slug: "{{name}}"
     editor:
       preview: false
     fields:
