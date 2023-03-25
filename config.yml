@@ -1,11 +1,12 @@
 backend:
   name: github
-  repo: edisim/decap-cms-now
+  repo: edisim/decap-cms-vercel
   branch: master
-  publish_mode: editorial_workflow
   base_url: https://decap-cms-now.vercel.app
   auth_endpoint: api/auth
+
 locale: "de"
+publish_mode: editorial_workflow
 
 media_folder: /img
 public_folder: /img
