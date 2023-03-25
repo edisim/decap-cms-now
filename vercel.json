@@ -13,12 +13,19 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/admin", "dest": "/admin/index.html" },
-    { "src": "/blog/([^/]+)", "dest": "/blog/$1.md" },
-    { "src": "/img/([^/]+)", "dest": "/img/$1.jpg" },
-    { "src": "/index.html", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/admin", "destination": "/admin/index.html" },
+    { "source": "/blog/([^/]+)", "destination": "/blog/$1.md" },
+    { "source": "/img/([^/]+)", "destination": "/img/$1.jpg" },
+    { "source": "/index.html", "destination": "/index.html" }
   ],
-  "cleanUrls": true
+  // "routes": [
+  //   { "src": "/api/(.*)", "dest": "/api/$1" },
+  //   { "src": "/admin", "dest": "/admin/index.html" },
+  //   { "src": "/blog/([^/]+)", "dest": "/blog/$1.md" },
+  //   { "src": "/img/([^/]+)", "dest": "/img/$1.jpg" },
+  //   { "src": "/index.html", "dest": "/index.html" }
+  // ],
+  // "cleanUrls": true
 }
