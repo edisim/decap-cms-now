@@ -23,18 +23,11 @@
     {
       "src": "img/**/*.jpg",
       "use": "@vercel/static"
-    },
-    {
-      "src": "img/**/*.svg",
-      "use": "@vercel/static"
     }
   ],
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/admin", "destination": "/admin/index.html" },
-    { "source": "/blog/([^/]+)", "destination": "/blog/$1.md" },
-    { "source": "/img/([^/]+)", "destination": "/img/$1.jpg" },
-    { "source": "/index.html", "destination": "/index.html" }
+    { "source": "/api/auth", "destination": "/api/auth.ts" },
+    { "source": "/api/callback", "destination": "/api/callback.ts" }
   ],
   "cleanUrls": true
 }
