@@ -15,10 +15,6 @@
     ],
     "routes": [
       { "src": "/api/(.*)", "dest": "/api/$1" }
-    ],
-    "env": {
-        "OAUTH_CLIENT_ID": "@OAUTH_CLIENT_ID",
-        "OAUTH_CLIENT_SECRET": "@OAUTH_CLIENT_SECRET"
-    }
+    ]
   }
   

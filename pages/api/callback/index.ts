@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
-import { create, renderBody } from "./_lib/oauth2";
+import { create, renderBody } from "../_lib/oauth2";
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";

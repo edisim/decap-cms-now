@@ -1,6 +1,6 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
 import crypto from "crypto";
-import { create } from "./_lib/oauth2";
+import { create } from "../_lib/oauth2";
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
