@@ -26,7 +26,7 @@ app.use(cors({
   origin: '*',
 }));
 
-app.get('/api/callback', async (req: express.Request, res: express.Response) => {
+app.get('/callback', async (req: express.Request, res: express.Response) => {
   const code = req.query.code as string;
   const { host } = req.headers;
 
