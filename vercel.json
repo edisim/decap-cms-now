@@ -13,11 +13,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "admin/index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "admin/config.yml",
+      "src": "config.yml",
       "use": "@vercel/static"
     },
     {
