@@ -76,7 +76,7 @@ app.use(cors({
   origin: '*',
 }));
 
-app.get('/callback', async (req: express.Request, res: express.Response) => {
+app.get('/api/callback', async (req: express.Request, res: express.Response) => {
   const code = req.query.code as string;
   const { host } = req.headers;
 
@@ -85,7 +85,7 @@ app.get('/callback', async (req: express.Request, res: express.Response) => {
   try {
     const accessToken = await oauth2.authorizationCode.getToken({
       code,
-      redirect_uri: `https://${host}/callback`
+      redirect_uri: `https://${host}/api/callback`
     });
     const { token } = oauth2.accessToken.create(accessToken);
 

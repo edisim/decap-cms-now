@@ -27,7 +27,7 @@
   ],
   "rewrites": [
     { "source": "/api/auth", "destination": "/api/auth.ts" },
-    { "source": "/callback", "destination": "/api/callback.ts" }
+    { "source": "/api/callback", "destination": "/api/callback.ts" }
   ],
   "cleanUrls": true
 }
