@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: robinpokorny/netlify-cms-now # CHANGE ME
+  repo: edisim/decap-cms-now
   branch: master
-  base_url: https://netlify-cms-now.now.sh # CHANGE ME
+  base_url: https://decap-cms-now.vercel.app
   auth_endpoint: api/auth
 
 media_folder: /img
