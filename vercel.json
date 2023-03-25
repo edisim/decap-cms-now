@@ -27,5 +27,5 @@
   //   { "src": "/img/([^/]+)", "dest": "/img/$1.jpg" },
   //   { "src": "/index.html", "dest": "/index.html" }
   // ],
-  // "cleanUrls": true
+  "cleanUrls": true
 }
