@@ -2,8 +2,10 @@ backend:
   name: github
   repo: edisim/decap-cms-now
   branch: master
+  publish_mode: editorial_workflow
   base_url: https://decap-cms-now.vercel.app
   auth_endpoint: api/auth
+locale: "de"
 
 media_folder: /img
 public_folder: /img
@@ -17,33 +19,54 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Titel", name: "title", widget: "string" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "DD.MM.YYYY",
+          time_format: false,
+        }
+      - {
+          label: "Autor",
+          name: "author",
+          widget: "relation",
+          collection: "authors",
+          search_fields: ["name"],
+          value_field: "{{slug}}",
+          display_fields: ["name"],
+          required: false,
+        }
+      - { label: "Beschreibung", name: "description", widget: "string" }
+      - { label: "Inhalt", name: "body", widget: "markdown" }
   - name: "pages"
-    label: "Pages"
+    label: "Seiten"
     folder: "pages"
     create: true
     slug: "{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Inhalt", name: "body", widget: "markdown" }
   - name: "settings"
-    label: "Settings"
+    label: "Einstellungen"
     folder: "settings"
-    create: false
+    create: true
     slug: "settings"
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Logo", name: "logo", widget: "image" }
-      - { label: "Favicon", name: "favicon", widget: "image" }
-      - { label: "Footer", name: "footer", widget: "string" }
+      - { label: "Titel", name: "title", widget: "string" }
+      - {
+          label: "Beschreibung",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Logo", name: "logo", widget: "image", required: false }
+      - { label: "Favicon", name: "favicon", widget: "image", required: false }
+      - { label: "Footer", name: "footer", widget: "string", required: false }
       - {
           label: "Navigation",
           name: "navigation",
@@ -53,9 +76,10 @@ collections:
               { label: "Label", name: "label", widget: "string" },
               { label: "Link", name: "link", widget: "string" },
             ],
+          required: false,
         }
   - name: "authors"
-    label: "Authors"
+    label: "Autoren"
     folder: "authors"
     create: true
     slug: "{{slug}}"
@@ -75,12 +99,5 @@ collections:
         }
       - { label: "Website", name: "website", widget: "string", required: false }
       - { label: "Email", name: "email", widget: "string", required: false }
-      - {
-          label: "Location",
-          name: "location",
-          widget: "string",
-          required: false,
-        }
+      - { label: "Ort", name: "location", widget: "string", required: false }
       - { label: "Role", name: "role", widget: "string", required: false }
-# demo to show netlify's possibilities
-
