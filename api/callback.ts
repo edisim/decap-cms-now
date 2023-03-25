@@ -1,7 +1,32 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
 import { create, renderBody } from "./_lib/oauth2";
+import cors from "cors";
+import dotenv from "dotenv";
+import express from "express";
+import helmet from "helmet";
+import { IncomingMessage, ServerResponse, createServer } from "http";
 
-export default async (req: VercelRequest, res: VercelResponse) => {
+dotenv.config();
+
+const app: express.Application = express();
+
+app.use(helmet());
+
+app.use(cors({
+  allowedHeaders: [
+    'Origin',
+    'X-Requested-With',
+    'Content-Type',
+    'Accept',
+    'X-Access-Token',
+  ],
+  credentials: true,
+  methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
+  preflightContinue: false,
+  origin: '*',
+}));
+
+app.get('/api/callback', async (req: express.Request, res: express.Response) => {
   const code = req.query.code as string;
   const { host } = req.headers;
 
@@ -23,4 +48,12 @@ export default async (req: VercelRequest, res: VercelResponse) => {
   } catch (e) {
     res.status(200).send(renderBody("error", e));
   }
+});
+
+const server = createServer((req: IncomingMessage, res: ServerResponse) => {
+  app(req as any, res as any);
+});
+
+export default (req: VercelRequest, res: VercelResponse) => {
+  server.emit("request", req, res);
 };
