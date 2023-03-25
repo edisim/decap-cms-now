@@ -1,7 +1,7 @@
-import { NowRequest, NowResponse } from "@now/node";
+import { NowRequest, VercelResponse } from "@now/node";
 import { create, renderBody } from "./_lib/oauth2";
 
-export default async (req: NowRequest, res: NowResponse) => {
+export default async (req: VercelRequest, res: VercelResponse) => {
   const code = req.query.code as string;
   const { host } = req.headers;
 
