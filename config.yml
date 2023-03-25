@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: edisim/decap-cms-vercel
+  open_authoring: true
   branch: master
   base_url: https://decap-cms-now.vercel.app
   auth_endpoint: api/auth
