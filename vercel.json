@@ -9,6 +9,13 @@
       }
     },
     {
+      "src": "api/_lib/oauth2.ts",
+      "use": "@vercel/node",
+      "config": {
+        "nodeVersion": "16.x"
+      }
+    },
+    {
       "src": "index.html",
       "use": "@vercel/static"
     },
