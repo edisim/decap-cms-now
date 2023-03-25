@@ -1,4 +1,4 @@
-import { NowRequest, VercelResponse } from "@now/node";
+import { VercelRequest, VercelResponse } from "@vercel/node";
 import { create, renderBody } from "./_lib/oauth2";
 
 export default async (req: VercelRequest, res: VercelResponse) => {
