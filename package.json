@@ -6,7 +6,8 @@
   "private": true,
   "dependencies": {
     "@types/simple-oauth2": "^2.5.2",
-    "simple-oauth2": "^2.5.2"
+    "simple-oauth2": "^2.5.2",
+    "@vercel/node": "^2.10.0"
   },
   "engines": {
     "node": "^16"
@@ -15,6 +16,5 @@
     "node": "16.16.0"
   },
   "devDependencies": {
-    "@vercel/node": "^2.10.0"
   }
 }
