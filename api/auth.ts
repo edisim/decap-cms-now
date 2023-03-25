@@ -45,7 +45,7 @@ app.get('/api/auth', (req: express.Request, res: express.Response) => {
   const oauth2 = create();
 
   const url = oauth2.authorizationCode.authorizeURL({
-    redirect_uri: `https://${host}/api/callback`,
+    redirect_uri: `https://${host}/callback`,
     scope: `repo,user`,
     state: randomString()
   });
