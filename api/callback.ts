@@ -45,7 +45,7 @@ app.get('/callback', async (req: express.Request, res: express.Response) => {
   try {
     const accessToken = await oauth2.authorizationCode.getToken({
       code,
-      redirect_uri: `https://${host}/api/callback`
+      redirect_uri: `https://${host}/callback`
     });
     const { token } = oauth2.accessToken.create(accessToken);
 
