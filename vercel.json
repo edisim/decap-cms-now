@@ -1,20 +1,23 @@
 {
-    "version": 2,
-    "builds": [
-      { 
-        "src": "api/**/*.ts", 
-        "use": "@vercel/node",
-        "config": {
-          "nodeVersion": "16.x"
-        }
-      },
-      {
-        "src": "index.html",
-        "use": "@vercel/static"
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.ts",
+      "use": "@vercel/node",
+      "config": {
+        "nodeVersion": "16.x"
       }
-    ],
-    "routes": [
-      { "src": "/api/(.*)", "dest": "/api/$1" }
-    ]
-  }
-  
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/admin", "dest": "/admin/index.html" },
+    { "src": "/blog/(.*)", "dest": "/blog/$1" },
+    { "src": "/img/(.*)", "dest": "/img/$1" },
+    { "src": "/index.html", "dest": "/index.html" }
+  ]
+}
