@@ -11,6 +11,10 @@
     {
       "src": "index.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "admin/index.html",
+      "use": "@vercel/static"
     }
   ],
   "rewrites": [
