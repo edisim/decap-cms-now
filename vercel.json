@@ -18,7 +18,7 @@
     }
   ],
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/admin", "destination": "/admin/index.html" },
     { "source": "/blog/([^/]+)", "destination": "/blog/$1.md" },
     { "source": "/img/([^/]+)", "destination": "/img/$1.jpg" },
